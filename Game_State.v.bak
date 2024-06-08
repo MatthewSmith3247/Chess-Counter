@@ -1,0 +1,90 @@
+module Game_State(clock,// Input
+						Reset,// Input
+						Pause,// Input
+						start, //Input
+						Default, //Input
+						sw1,// Input
+						sw2,// Input
+						p1,// Output
+						p2,//Output
+						Load,//Output
+						ff);//Output
+						
+				
+//States: Reset, Load, Pause, P1, P2		
+localparam State_Reset = 3'd0, State_Load = 3'd1, State_Pause = 3'd2,State_P1 = 3'd3,State_P2 = 3'd4;
+
+reg[1:0] CurrentState, nextstate;
+
+always@(posedge Clock)
+
+ begin
+    if (reset)
+        currentState <= State_Reset;
+    else
+        currentState <= nextState;
+end
+
+// Combinational logic for determining the next state
+always
+
+      begin
+    nextState = currentState; // Default to holding the current state
+	 
+    case (currentState)
+        State_Reset:
+            begin
+                if (sw1) nextState = State_Load;
+                else if (sw2) nextState = State_Load;
+                else if (pause) nextState = State_Load;
+	             else if (Start) nextState = State_Load;
+                else if (Reset) nextState = State_Load;				 
+                else if (Default) nextState = State_Load;					 
+            end
+        State_Load:
+            begin
+                if (sw1) nextState = State_Load;
+                else if (sw2) nextState = State_Load;
+                else if (pause) nextState = State_Load;
+	             else if (Start) nextState = State_Pause;
+                else if (Reset) nextState = State_Reset;				 
+                else if (Default) nextState = State_Load;	
+            end
+        State_Pause:
+            begin
+                if (sw1) nextState = State_P1;
+                else if (sw2) nextState = State_P2;
+                else if (pause) nextState = State_Pause;
+	             else if (Start) nextState = State_Pause;
+                else if (Reset) nextState = State_Reset;				 
+                else if (Default) nextState = State_Pause;	
+            end
+		  State_P1:
+            begin
+                if (sw1) nextState = State_P2;
+                else if (sw2) nextState = State_P1;
+                else if (pause) nextState = State_Pause;
+	             else if (Start) nextState = State_P1;
+                else if (Reset) nextState = State_Reset;				 
+                else if (Default) nextState = State_P1;	
+            end
+		  State_P2:
+            begin
+                if (sw1) nextState = State_P2;
+                else if (sw2) nextState = State_P1;
+                else if (pause) nextState = State_Pause;
+	             else if (Start) nextState = State_P2;
+                else if (Reset) nextState = State_Reset;				 
+                else if (Default) nextState = State_P2;	
+            end				
+        default: nextState = Load;
+    endcase
+end
+
+// Output logic
+assign p1 = (currentState == Timerp1);
+assign p2 = (currentState == Timerp2);
+
+endmodule
+
+						

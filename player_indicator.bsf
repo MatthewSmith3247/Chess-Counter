@@ -1,0 +1,135 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 184 304)
+	(text "player_indicator" (rect 5 0 101 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 267 24 284)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Player" (rect 0 0 37 19)(font "Intel Clear" (font_size 8)))
+		(text "Player" (rect 21 27 58 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "pin_name1" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name1" (rect 80 27 147 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "pin_name2" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name2" (rect 80 43 147 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "pin_name3" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name3" (rect 80 59 147 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 64)(pt 152 64))
+	)
+	(port
+		(pt 168 80)
+		(output)
+		(text "pin_name4" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name4" (rect 80 75 147 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 80)(pt 152 80))
+	)
+	(port
+		(pt 168 96)
+		(output)
+		(text "pin_name5" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name5" (rect 80 91 147 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 96)(pt 152 96))
+	)
+	(port
+		(pt 168 112)
+		(output)
+		(text "pin_name6" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name6" (rect 80 107 147 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 112)(pt 152 112))
+	)
+	(port
+		(pt 168 128)
+		(output)
+		(text "pin_name7" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name7" (rect 80 123 147 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 128)(pt 152 128))
+	)
+	(port
+		(pt 168 144)
+		(output)
+		(text "pin_name8" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name8" (rect 80 139 147 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 144)(pt 152 144))
+	)
+	(port
+		(pt 168 160)
+		(output)
+		(text "pin_name9" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name9" (rect 80 155 147 174)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 160)(pt 152 160))
+	)
+	(port
+		(pt 168 176)
+		(output)
+		(text "pin_name10" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name10" (rect 72 171 147 190)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 176)(pt 152 176))
+	)
+	(port
+		(pt 168 192)
+		(output)
+		(text "pin_name11" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name11" (rect 72 187 147 206)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 192)(pt 152 192))
+	)
+	(port
+		(pt 168 208)
+		(output)
+		(text "pin_name12" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name12" (rect 72 203 147 222)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 208)(pt 152 208))
+	)
+	(port
+		(pt 168 224)
+		(output)
+		(text "pin_name13" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name13" (rect 72 219 147 238)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 224)(pt 152 224))
+	)
+	(port
+		(pt 168 240)
+		(output)
+		(text "pin_name14" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pin_name14" (rect 72 235 147 254)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 240)(pt 152 240))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 272))
+	)
+)
